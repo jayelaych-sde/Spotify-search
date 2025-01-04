@@ -645,6 +645,13 @@ main {
 }
 
 @media (max-width: 576px) {
+  .search__title {
+    font-size: 32px;
+  }
+  .search__input,
+  .search__btn {
+    font-size: 20px;
+  }
   .nav__logo {
     font-size: 24px;
   }
@@ -659,7 +666,25 @@ main {
   }
 }
 
-@media (min-width: 375px) {
+@media only screen and (min-width: 375px) and (max-width: 414px) {
+  .search__title {
+    font-size: 24px;
+  }
+  .search__input,
+  .search__btn {
+    font-size: 16px;
+  }
+  .search__btn {
+    padding: 8px;
+  }
+  .search__input--container {
+    padding: 0 16px;
+  }
+  .popup {
+    left: 16px;
+    bottom: -40px;
+    width: 276px;
+  }
   .nav__logo {
     align-items: center;
   }
