@@ -27,7 +27,7 @@ async function redirectToAuthCodeFlow(clientId) {
   params.append("response_type", "code");
   params.append(
     "redirect_uri",
-    "https://jayelaych-sde.github.io/Spotify-search/callback"
+    "https://jayelaych-sde.github.io/Spotify-search/src"
   );
   params.append("scope", "user-read-private user-read-email");
   params.append("code_challenge_method", "S256");
@@ -68,7 +68,7 @@ async function getAccessToken(clientId, code) {
   params.append("code", code);
   params.append(
     "redirect_uri",
-    "https://jayelaych-sde.github.io/Spotify-search/callback"
+    "https://jayelaych-sde.github.io/Spotify-search/src"
   );
   params.append("code_verifier", verifier);
 
