@@ -666,7 +666,7 @@ main {
   }
 }
 
-@media only screen and (min-width: 375px) and (max-width: 414px) {
+@media (min-width: 375px) {
   .search__title {
     font-size: 24px;
   }
