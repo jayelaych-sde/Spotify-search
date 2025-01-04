@@ -639,9 +639,6 @@ main {
   .song {
     width: 50%;
   }
-  .track__info {
-    margin: 0 24px;
-  }
 }
 
 @media (max-width: 576px) {
@@ -664,9 +661,32 @@ main {
   .song {
     width: 100%;
   }
+  .album__name {
+    font-size: 40px;
+    margin: 0;
+  }
+  .back-btn {
+    font-size: 32px;
+  }
+  .track__play-pause {
+    padding: 8px 10px;
+    margin-right: 16px;
+    font-size: 12px;
+  }
+  .track__title {
+    font-size: 16px;
+    width: 33%;
+  }
+  .track__artist {
+    font-size: 12px;
+    width: 25%;
+  }
+  .track__duration {
+    font-size: 12px;
+  }
 }
 
-@media (min-width: 375px) {
+@media (max-width: 375px) {
   .search__title {
     font-size: 24px;
   }
@@ -722,5 +742,11 @@ main {
     width: 100%;
     justify-content: space-between;
     margin-top: 24px;
+  }
+  .album__name {
+    font-size: 32px;
+  }
+  .back-btn {
+    font-size: 24px;
   }
 }
