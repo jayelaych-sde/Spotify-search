@@ -2,6 +2,13 @@ const clientId = "817f9ed92b564d15a42ab7ab774282c5";
 const params = new URLSearchParams(window.location.search);
 const code = params.get("code");
 const keyword = localStorage.getItem("keyword");
+const localRedirectUri = "http://127.0.0.1:5500/";
+const productionRedirectUri =
+  "https://jayelaych-sde.github.io/Spotify-search/src";
+const redirectUri =
+  window.location.hostname === "127.0.0.1"
+    ? localRedirectUri
+    : productionRedirectUri;
 
 console.log(clientId);
 
@@ -25,10 +32,7 @@ async function redirectToAuthCodeFlow(clientId) {
   const params = new URLSearchParams();
   params.append("client_id", clientId);
   params.append("response_type", "code");
-  params.append(
-    "redirect_uri",
-    "https://jayelaych-sde.github.io/Spotify-search/src"
-  );
+  params.append("redirect_uri", redirectUri);
   params.append("scope", "user-read-private user-read-email");
   params.append("code_challenge_method", "S256");
   params.append("code_challenge", challenge);
@@ -66,10 +70,7 @@ async function getAccessToken(clientId, code) {
   params.append("client_id", clientId);
   params.append("grant_type", "authorization_code");
   params.append("code", code);
-  params.append(
-    "redirect_uri",
-    "https://jayelaych-sde.github.io/Spotify-search/src"
-  );
+  params.append("redirect_uri", redirectUri);
   params.append("code_verifier", verifier);
 
   const result = await fetch("https://accounts.spotify.com/api/token", {
