@@ -698,7 +698,7 @@ main {
   }
 }
 
-@media (min-width: 330px) and (max-width: 430px) {
+@media (min-width: 330px) and (max-width: 475px) {
   .search__title {
     font-size: 24px;
   }
