@@ -50,7 +50,7 @@ function storeAlbumId(albumId) {
 function trackHTML(track) {
   return `<div class="song">
             <div class="song-card">
-              <a href="./src/tracks.html" class="song-card__img--link" data-track="${
+              <a href="./tracks.html" class="song-card__img--link" data-track="${
                 track.id
               }">
                 <figure class="song-card__img">
@@ -79,7 +79,7 @@ function isAlbumSingle(album) {
 function albumHTML(album) {
   return `<div class="song">
             <div class="song-card">
-              <a href="./src/tracks.html" class="song-card__img--link" data-album="${
+              <a href="./tracks.html" class="song-card__img--link" data-album="${
                 album.id
               }">
                 <figure class="song-card__img">
