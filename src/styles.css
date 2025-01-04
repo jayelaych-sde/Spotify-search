@@ -674,15 +674,25 @@ main {
     font-size: 12px;
   }
   .track__title {
-    font-size: 16px;
-    width: 33%;
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 8px;
   }
   .track__artist {
-    font-size: 12px;
-    width: 25%;
+    font-size: 16px;
+    width: 50%;
+    margin: 0;
+    margin-bottom: 8px;
   }
   .track__duration {
-    font-size: 12px;
+    font-size: 16px;
+    width: 50%;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  .track__info--text {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
