@@ -660,6 +660,7 @@ main {
     padding: 8px 12px;
   }
   .song {
+    max-width: 600px;
     width: 100%;
   }
   .album__name {
