@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://kit.fontawesome.com/d760ca934c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./songs.js" defer></script>
+    <title>Sportify Search</title>
+  </head>
+  <body>
+    <div class="row nav__row">
+      <nav>
+        <div class="nav__container">
+          <div class="nav__logo">
+            <figure class="logo">
+              <i class="fa-brands fa-spotify"></i>
+            </figure>
+            <div class="nav__logo--text">Spotify Search</div>
+          </div>
+          <ul class="nav__links">
+            <li><a href="./index.html" class="nav__link">Home</a></li>
+            <li>
+              <a href="./songs.html" class="nav__link nav__link--primary"
+                >Search for Song</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <main class="songs__page--container">
+      <div class="container">
+        <div class="row">
+          <div class="song-page">
+            <div class="search__input--container song-page__search">
+              <input
+                type="text"
+                class="search__input song-page__input"
+                placeholder="Search artist/album/track..."
+                required
+              />
+              <figure class="search__icon">
+                <button class="search__btn song-page__btn">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </figure>
+              <div class="popup song-page__popup">
+                Please input an artist/album/track name
+              </div>
+            </div>
+            <div class="songs__results--container">
+              <h1 class="songs__results">
+                Search results <span class="search__name">:</span>
+              </h1>
+              <div class="song__results--filter">
+                <label class="songs__results--range">Release date:</label>
+                <input
+                  type="month"
+                  name="from-date"
+                  id="from-date"
+                  class="songs__results--date"
+                />
+                <span class="between">-</span>
+                <input
+                  type="month"
+                  name="to-date"
+                  value="2024-12"
+                  id="to-date"
+                  class="songs__results--date"
+                />
+              </div>
+              <div class="songs__results--track-album">
+                <label class="songs__results--sort-by">Track/Album: </label>
+                <select
+                  name=""
+                  id="filterType"
+                  onchange="handleSelectChangeType(event)"
+                >
+                  <option value="ALL" selected>All</option>
+                  <option value="TRACKS">Tracks Only</option>
+                  <option value="ALBUMS">Albums Onlys</option>
+                </select>
+              </div>
+              <div class="songs__results--sort">
+                <label class="songs__results--sort-by">Sort by: </label>
+                <select
+                  name=""
+                  id="filter"
+                  onchange="handleSelectChange(event)"
+                >
+                  <option value="SORT" disabled selected>Sort</option>
+                  <option value="POPULARITY">Popularity</option>
+                  <option value="DURATION">Duration</option>
+                  <option value="RECENT">Recent Releases</option>
+                  <!-- <option value="EXPLICIT_TRUE">Explicit Lyrics</option>
+                  <option value="EXPLICIT_FALSE">Clean Lyrics</option> -->
+                </select>
+              </div>
+            </div>
+            <div class="songs__container">
+              <div class="songs__list">
+                <div class="song"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
