@@ -22,6 +22,6 @@ function saveKeyword() {
     popup.style.display = "none";
     searchInput.classList.remove("error");
     localStorage.setItem("keyword", keyword);
-    window.location.href = `${window.location.origin}/songs.html`;
+    window.location.href = `${window.location.origin}/src/songs.html`;
   }
 }
