@@ -6,7 +6,7 @@ const localRedirectUri = "http://127.0.0.1:5500/";
 const productionRedirectUri =
   "https://jayelaych-sde.github.io/Spotify-search/src";
 const redirectUri =
-  window.location.hostname === "127.0.0.1"
+  window.location.hostname === "localhost"
     ? localRedirectUri
     : productionRedirectUri;
 

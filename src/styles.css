@@ -610,3 +610,92 @@ main {
 .track__duration {
   margin-right: 16px;
 }
+
+@media (max-width: 768px) {
+  .song-page__search {
+    padding: 0 24px;
+  }
+  .song-page__popup {
+    left: 24px;
+  }
+  .songs__results--container {
+    flex-wrap: wrap;
+  }
+  .songs__results {
+    width: 100%;
+    text-align: center;
+    margin: 8px 0 24px 0;
+  }
+  .song__results--filter {
+    text-align: center;
+    width: 100%;
+  }
+  .songs__results--track-album,
+  .songs__results--sort {
+    max-width: 240px;
+    width: 50%;
+    justify-content: space-around;
+  }
+  .song {
+    width: 50%;
+  }
+  .track__info {
+    margin: 0 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav__logo {
+    font-size: 24px;
+  }
+  .nav__link {
+    font-size: 16px;
+  }
+  .nav__link--primary {
+    padding: 8px 12px;
+  }
+  .song {
+    width: 100%;
+  }
+}
+
+@media (min-width: 375px) {
+  .nav__logo {
+    align-items: center;
+  }
+  .nav__link {
+    font-size: 16px;
+    margin: 0 8px;
+  }
+  .nav__link--primary {
+    display: none;
+  }
+  .song-page__input {
+    font-size: 16px;
+  }
+  .song-page__btn {
+    font-size: 16px;
+  }
+  .songs__results {
+    font-size: 16px;
+  }
+  .song__results--filter {
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px;
+    align-items: center;
+  }
+  .songs__results--range {
+    margin-bottom: 16px;
+  }
+  .songs__results--date {
+    width: 120px;
+  }
+  .songs__results--track-album,
+  .songs__results--sort {
+    max-width: 240px;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+}
