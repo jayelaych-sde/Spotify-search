@@ -140,6 +140,7 @@ function hasFeature(track) {
 }
 
 async function getAccessToken() {
+  console.log(sessionStorage.getItem("access_token"));
   return sessionStorage.getItem("access_token");
 }
 
