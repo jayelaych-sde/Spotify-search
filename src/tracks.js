@@ -137,8 +137,15 @@ async function getTrack(trackId) {
 }
 
 async function renderTrack() {
+  songsList.classList.add("songs__loading");
+  console.log("Loader added");
+
   const item = await getMostRecentId(trackId, albumId);
   console.log(item);
+
+  songsList.classList.remove("songs__loading");
+  console.log("Loader removed");
+
   trackPageAndImg.innerHTML = titleHTML(item);
   trackList.innerHTML =
     item.type === "track"
