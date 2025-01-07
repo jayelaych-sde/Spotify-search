@@ -172,7 +172,14 @@ function onSearchChange() {
 async function renderSearch(keyword, searchResult) {
   searchName.innerHTML = `for "${keyword}"`;
   console.log(localStorage.getItem("keyword"));
+
+  songsList.classList.add("songs__loading");
+  console.log("Loader added");
+
   const result = await searchResult;
+
+  songsList.classList.remove("songs__loading");
+  console.log("Loader removed");
 
   console.log(result);
   currentResult = result;
