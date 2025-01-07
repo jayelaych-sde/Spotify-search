@@ -487,6 +487,9 @@ main {
 
 .lds-facebook {
   /* change color here */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fce54f;
 }
 
